@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gestión de Noticias</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-color: #f5f9f5;
+    }
+    header {
+      background-color:cadetblue;
+    }
+    footer {
+      background-color: cadetblue;
+    }
+    .navbar {
+      background-color: cadetblue;
+    }
+    .sidebar {
+      background-color:aquamarine;
+      padding: 1rem;
+    }
+    main {
+      flex: 1;
+    }
+    .logo-img {
+      height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <!-- ENCABEZADO CON LOGO -->
+  <header class="text-white py-3">
+    <div class="container d-flex align-items-center justify-content-between">
+      <h2 class="mb-0">Gestión de Noticias</h2>
+      <img src="https://via.placeholder.com/100x50?text=LOGO" alt="Logo" class="logo-img">
+    </div>
+  </header>
+
+  <!-- MENÚ PRINCIPAL -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Menú Principal</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Noticias</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Acerca de</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="container-fluid my-3">
+    <div class="row">
+      <!-- CONTENIDO CENTRAL -->
+      <section class="col-md-9">
+        <div class="card">
+          <div class="card-header bg-success text-white">Formulario de Noticia</div>
+          <div class="card-body">
+            <form>
+              <div class="mb-3">
+                <label for="id" class="form-label">ID</label>
+                <input type="text" class="form-control" id="id" name="id" required />
+              </div>
+              <div class="mb-3">
+                <label for="clave" class="form-label">Clave de Noticia</label>
+                <input type="text" class="form-control" id="clave" name="clave" required />
+              </div>
+              <div class="mb-3">
+                <label for="titulo" class="form-label">Título</label>
+                <input type="text" class="form-control" id="titulo" name="titulo" required />
+              </div>
+              <div class="mb-3">
+                <label for="fecha" class="form-label">Fecha</label>
+                <input type="date" class="form-control" id="fecha" name="fecha" required />
+              </div>
+              <div class="mb-3">
+                <label for="categoria" class="form-label">Categoría</label>
+                <select class="form-select" id="categoria" name="categoria" required>
+                  <option value="">Seleccione categoría</option>
+                  <option value="policiaco">Policiaco</option>
+                  <option value="sociales">Sociales</option>
+                  <option value="politico">Político</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Tipo</label><br />
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="tipo" id="tipo1" value="8 columnas" required />
+                  <label class="form-check-label" for="tipo1">8 columnas</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="tipo" id="tipo2" value="principal" />
+                  <label class="form-check-label" for="tipo2">Principal</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="tipo" id="tipo3" value="secundaria" />
+                  <label class="form-check-label" for="tipo3">Secundaria</label>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="texto" class="form-label">Texto</label>
+                <textarea class="form-control" id="texto" name="texto" rows="4" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-success">Guardar</button>
+              <button type="reset" class="btn btn-outline-secondary">Limpiar</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- SIDEBAR DERECHO -->
+      <aside class="col-md-3 sidebar">
+        <h5>Opciones</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item"><a class="nav-link" href="#">Agregar</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Eliminar</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Consultar</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Cambios</a></li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="text-white text-center py-3">
+    <small>&copy; 2025 Sistema de Gestión de Noticias</small>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
