@@ -14,4 +14,4 @@ Aplicación desarrollada para la gestión de productos y ventas en una tienda de
 Proyecto mayormente funcional con algunas mejoras pendientes.
 
 ## Autor
-Fernanda Katzeni Barrales López
+Fernanda Katzeni Barrales López, Dulce Yoselyn Pérez Martínez y Emmanuel López Castillo.
